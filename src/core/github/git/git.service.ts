@@ -1,19 +1,34 @@
-export class GitService {
+import { CommitProps } from "../models/CommitProps";
+import { GithubBaseService } from "../models/GithubBase";
 
-    private token: string;
-    private urlRepo: string;
-    private BRANCH = "sync-branch";
+export class GitService extends GithubBaseService {
 
-    constructor(token: string, urlRepo: string) {
-        this.token = token;
-        this.urlRepo = urlRepo; 
+
+
+
+
+
+    public AddChanges(): boolean {
+        throw new Error("Method not implemented.");
     }
 
+    public CommitChanges(): boolean {
+        throw new Error("Method not implemented.");
+    }
 
-    
+    public PullChanges(): boolean {
+        throw new Error("Method not implemented.");
+    }
 
-    
+    public CreateBranch(): boolean {
+        throw new Error("Method not implemented.");
+    }
 
+    public RestoreChanges(commitHash: string): CommitProps {
+        throw new Error("Method not implemented.");
+    }
 
-
+    public IsValidRepo(repoURL: string): boolean {
+        throw new Error("Method not implemented.");
+    }
 }
